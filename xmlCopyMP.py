@@ -4,8 +4,8 @@ import xml.etree.ElementTree as ElementTree
 import shutil
 
 
-def xmlCopy(XmlTreeRoot):
-    for node in XmlTreeRoot:
+def xmlCopy(xmlTreeRoot):
+    for node in xmlTreeRoot:
         if node.attrib['source_path'][0] == '/':
             shutil.copy2(node.attrib['source_path'] + '/' + node.attrib['file_name'], node.attrib['destination_path'])
         else:
